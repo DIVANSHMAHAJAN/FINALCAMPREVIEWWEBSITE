@@ -1,0 +1,15 @@
+
+.navbar-toggler-icon{
+  background-image:url('https://static.thenounproject.com/png/696519-200.png') ;
+}
+.red
+{
+	color:red !important;
+}
+
+a:hover{
+   
+    color:white !important;
+    text-decoration:underline !important;
+  
+}

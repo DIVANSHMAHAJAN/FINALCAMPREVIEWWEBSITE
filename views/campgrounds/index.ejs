@@ -1,0 +1,107 @@
+<% layout('layouts/boilerplate')%>
+<link rel="stylesheet" href="/stylesheets/all.css">
+<div id="cluster-map"></div>
+    <div>
+    <h1 class="centre-align highlight">All Campgrounds</h1>
+    </div>
+    <div class="row">
+    <% for (let campground of campgrounds){%>
+    <div class="col-lg-4 col-sm-6 col-xs-12 mb-3" >
+        <div class="card m-2">
+            
+                <%if(campground.images.length){%>
+                <img  alt="" src="<%=campground.images[0].url%>" class="card-img-top placement" >
+                <% }else {%>
+                <img alt=""
+                    src="https://res.cloudinary.com/dvwb4lvge/image/upload/v1624998664/YelpCamp/dqgwow2ttqxyru4yripu.jpg" class="card-img-top placement" >
+                <% } %>
+        
+            
+                <div class="card-body heightclass"  >
+                    <h5 class="card-title"><%= campground.title %> </h5>
+                    <p class="card-text"><%= campground.description %></p>
+                    <p class="card-text">
+                        <small class="text-muted"><%= campground.location%></small>
+                    </p>
+                </div>
+                <div style="display:grid">
+                    <a class="btn btn-primary" href="/campgrounds/<%=campground._id%>" style="margin:auto">View <%=campground.title%></a>
+                </div>
+           
+        </div>
+    </div>
+    <% }%>
+</div>
+<script>
+    const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
+    const campgrounds = { features: <%- JSON.stringify(campgrounds) %>}
+</script>
+
+<script src="/javascripts/clusterMap.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<!--class="col-lg-4 col-sm-6 col-xs-12 mb-3">
+                <div class="card m-2">
+                     
+                    <img src="https://res.cloudinary.com/drbey8vzq/image/upload/v1621346216/Mapper/xc1olrkm4nhxrgztvogi.jpg " class="card-img-top" style="width: auto; height: 13rem;">
+                     
+                    <div class="card-body">
+                    <h5 class="card-title">Taj Palace</h5>
+                    <p class="card-text">Taj Palace, New Delhi, India</p>
+                    <a href="/hotel/60a3c7a8f7763b467ca9d01a" class="btn btn-sm btn-info">Details</a>
+                    </div>
+                </div>
+            div>
+            */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="card m-2">
+                     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
