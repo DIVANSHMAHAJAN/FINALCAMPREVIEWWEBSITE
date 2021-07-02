@@ -60,9 +60,12 @@ module.exports.updateCampground = async (req, res) => {
     console.log(req.body);
     const campground = await Campground.findByIdAndUpdate(id, { ...req.body.campground });
     const imgs = req.files.map(f => ({ url: f.path, filename: f.filename }));
-    console.log("kkkk");
-    console.log(campground.images.length);
+    //console.log("kkkk");
+    //console.log(campground.images.length);
+    if(imgs)
+    {
     campground.images.push(...imgs);
+    }
     console.log(campground.images.length);
     for(let y of campground.images)
     {
