@@ -14,8 +14,8 @@ background:url('https://images.unsplash.com/photo-1558439968-2ee0a2b07e4b?ixlib=
 
 .heightclass
 {
-	height:300px;
-	overflow:scroll;
+	height:100px;
+	/*overflow:scroll;*/
 }
 .placement
 {
