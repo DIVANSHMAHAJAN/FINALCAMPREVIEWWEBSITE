@@ -60,6 +60,10 @@ module.exports.updateCampground = async (req, res) => {
     const imgs = req.files.map(f => ({ url: f.path, filename: f.filename }));
     console.log("kkkk");
     campground.images.push(...imgs);
+    for(let y of campground.images)
+    {
+        console.log(y)
+    }
     await campground.save();
     if (req.body.deleteImages) {
         for (let filename of req.body.deleteImages) {
