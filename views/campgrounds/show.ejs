@@ -1,4 +1,5 @@
 <% layout('layouts/boilerplate')%>
+<link rel="stylesheet" href="/stylesheets/imagesforback.css">
 <link rel="stylesheet" href="/stylesheets/stars.css">
 <div class="row">
     <div class="col-6">
@@ -31,7 +32,7 @@
             <ul class="list-group list-group-flush">
                 <li class="list-group-item text-muted"><%= campground.location%></li>
                 <li class="list-group-item">Submitted by <%= campground.author.username%></li>
-                <li class="list-group-item">$<%= campground.price%>/night</li>
+                <li class="list-group-item"><b>Price per Night: ₹</b><%= campground.price%></li>
             </ul>
             <%  if( currentUser && campground.author.equals(currentUser._id))  {%>
             <div class="card-body">
